@@ -76,10 +76,14 @@ WSGI_APPLICATION = 'lessonplanner.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
+        'ENGINE': 'django.db.backends.postgresql',
+        'NAME': 'lessonplanner',
+        'USER': 'postgres', 
+        'PASSWORD': 'toto123123',
+        'PORT': '5432',
     }
 }
+
 
 
 # Password validation
