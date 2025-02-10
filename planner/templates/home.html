@@ -1,0 +1,18 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/home.css' %}" />
+{% endblock %} {% block content %}
+
+<section class="logo-container">
+  <img
+    src="{% static 'images/lessonpb5.png' %}"
+    alt="Text reads: Lesson Plan Generator"
+  />
+  <div class="classroom-container">
+    <img
+      src="{% static 'images/lessonteach.png' %}"
+      alt="The Lesson Plan Generator"
+    />
+  </div>
+</section>
+
+{% endblock %}
