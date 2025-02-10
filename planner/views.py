@@ -9,7 +9,7 @@ def about(request):
     return render(request, 'about.html')
 
 def classroom_index(request):
-    return render(request, 'classrooms/index.html', {'classrooms': classrooms})
+    return render(request, 'classrooms/index.html', {'classrooms': classrooms})  # Update this line why is has ss in classroom`
 
 
 class Classroom:
@@ -22,8 +22,10 @@ class Classroom:
 
 classrooms = [
     Classroom(102, 'Grade 10', 'A', ['Aysha', 'Nuha', 'Salma'], 'Great participation.'),
-    Classroom(102, 'Grade 11', 'B', ['Jood', 'Layla', 'Fiona'], 'Needs improvement in discipline.'),
-    Classroom(317, 'Grade 12', 'A', ['Khadija', 'Hannah', 'Rima'], 'Excellent teamwork.'),
-    Classroom(316, 'Grade 10', 'C', ['Mona', 'Reem', 'Hala'], 'Struggles with assignments.')
+    
 ]
 
+def classroom_detail(request, classroom_id):
+    classroom = Classroom.objects.get(id= classroom_id)
+    return render(request, 'classrooms/detail.html', {'classroom': classroom})
+# and this doesnt have ss in classroom
