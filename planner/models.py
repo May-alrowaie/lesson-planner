@@ -18,6 +18,10 @@ class Classroom(models.Model):
 
     def __str__(self):
         return f"{self.grade} - {self.division}"
+    
+        """Convert students_list string into a list"""
+    def get_students(self):
+        return self.students_list.split(",") if self.students_list else []
 
 class LessonPlan(models.Model):
     plan_id = models.AutoField(primary_key=True)
