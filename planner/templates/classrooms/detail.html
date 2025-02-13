@@ -9,9 +9,17 @@
     <img src="{% static 'images/classroom.svg' %}" alt="A classroom" />
   </div>
   <div class="classroom-details">
-    <h1>{{ classroom.name }}</h1>
+    <h1>{{ classroom.division }}</h1>
 
-    <p>{{ classroom.description }}</p>
+    <p>{{ classroom.grade }}</p>
+    <div class="classroom-actions">
+      <a href="{% url 'classroom-update' classroom.id %}" class="btn warn"
+        >Edit</a
+      >
+      <a href="{% url 'classroom-delete' classroom.id %}" class="btn danger"
+        >Delete</a
+      >
+    </div>
   </div>
 </section>
 {% endblock %}

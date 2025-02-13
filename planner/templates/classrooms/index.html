@@ -19,10 +19,10 @@
     <a href="/classrooms/{{classroom.id}}">
       <div class="card-content">
         <div class="card-img-container">
-          <img src="{% static 'images/classroom.svg' %}" alt="A classroom />
+          <img src="{% static 'images/classroom.svg' %}" alt="A classroom " />
         </div>
-        <h2 class="card-title">{{ classroom.name }}</h2>
-        <p><small>{{ classroom.description }}</small></p>
+        <h2 class="card-title">Division: {{ classroom.division}}</h2>
+        <h3>Grade: {{ classroom.grade }}</h3>
       </div>
     </a>
   </div>

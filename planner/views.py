@@ -1,6 +1,6 @@
 from django.shortcuts import render 
-from django.http import HttpResponse
-from django.views.generic.edit import CreateView
+# from django.http import HttpResponse
+from django.views.generic.edit import CreateView, UpdateView, DeleteView    
 from .models import Classroom
 
 
@@ -14,10 +14,19 @@ def about(request):
 class ClassroomCreate(CreateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
+    success_url = '/classroom/'
 
+class ClassroomUpdate(UpdateView):
+    model = Classroom
+    fields = ['grade', 'division', 'students_list', 'feedback']
+
+class ClassroomDelete(DeleteView):
+    model = Classroom
+    success_url = '/classrooms/'
 
 
 def classroom_index(request):
+    classrooms = Classroom.objects.all()     #  //
     return render(request, 'classrooms/index.html', {'classrooms': classrooms})  # Update this line why is has ss in classroom`
 
 def classroom_detail(request, classroom_id):
