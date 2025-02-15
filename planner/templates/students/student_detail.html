@@ -3,10 +3,10 @@
 
 {% endblock %} {% block content %}
 <section class="student-container">
-  <div class="student-img">
-    <img src="{% static 'images/studentid.jpg' %}" alt="A student" />
-  </div>
   <div class="student-details">
+    <div class="student-img">
+      <img src="{% static 'images/studentid.jpg' %}" alt="A student" />
+    </div>
     <h2>Student Details</h2>
 
     <p>student ID: {{ student.student_id }}</p>

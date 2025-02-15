@@ -10,6 +10,7 @@
   width: 75%;
   max-width: 350px;
   align-items: center;
+  justify-content: center;
 }
 
 .usr-img {
@@ -20,7 +21,6 @@
 .student-details {
   width: 98%;
   align-items: center;
-  text-align: center;
   justify-content: center;
 }
 
