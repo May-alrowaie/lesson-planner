@@ -21,5 +21,7 @@ path('lessonplans/<int:plan_id>/', views.lessonplan_detail, name='lessonplan-det
 path('lessonplans/create/', views.LessonPlanCreate.as_view(), name='lessonplan-create'),
 path('lessonplans/<int:pk>/update/', views.LessonPlanUpdate.as_view(), name='lessonplan-update'),
 path('lessonplans/<int:pk>/delete/', views.LessonPlanDelete.as_view(), name='lessonplan-delete'),
+#urls for students:
+path('students/', views.student_index, name='student-index'),
 ]
 

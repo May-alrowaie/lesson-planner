@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link rel="stylesheet" href="{% static 'css/students/student-detail.css' %}" />
+{% endblock %} {% block content %}
+<section class="student-container">
+  <div class="student-img">
+    <img src="{% static 'images/student.svg' %}" alt="A student" />
+  </div>
+  <div class="student-details">
+    <h2>Student Details</h2>
+    <p>student ID: {{ student.student_id }}</p>
+    <h1>Name: {{ student.name}}</h1>
+    <h1>Grade: {{ student.grade }}</h1>
+    <h1>Division: {{ student.division }}</h1>
+    <p>Students Level: {{ student.students_level }}</p>
+    <p>Activity Level: {{ student.activity_level }}</p>
+    <p>Learning Style: {{ student.learning_style }}</p>
+    <p>Multiple_intelligence: {{ student.multiple_intelligence }}</p>
+    <p>Special_needs: {{ student.special_needs }}</p>
+    <p>Parent_info: {{ student.parent_info }}</p>
+    <p>Feedback: {{ student.feedback }}</p>
+  </div>
+</section>
+{% endblock %}

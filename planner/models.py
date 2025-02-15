@@ -11,6 +11,9 @@ class User(models.Model):
     def __str__(self):
         return self.name
 
+
+
+
 class Classroom(models.Model):
     classroom_id = models.AutoField(primary_key=True)
     grade = models.CharField(max_length=10)
@@ -68,3 +71,6 @@ class Student(models.Model):
 
     def __str__(self):
         return self.name
+    
+    def get_absolute_url(self):
+        return reverse('student-detail', kwargs={'student_id': self.student_id})

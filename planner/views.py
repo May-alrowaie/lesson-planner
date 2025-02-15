@@ -66,4 +66,9 @@ class LessonPlanDelete(DeleteView):
     model = LessonPlan
     success_url = '/lessonplans/'
 
-    
+#STUDENTS:
+
+def student_index(request):
+    students = Student.objects.all()     #  //
+    return render(request, 'students/index.html', {'students': students}) 
+
