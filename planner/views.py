@@ -72,3 +72,22 @@ def student_index(request):
     students = Student.objects.all()     #  //
     return render(request, 'students/index.html', {'students': students}) 
 
+def student_detail(request, student_id):
+    student = get_object_or_404(Student, student_id=student_id)
+    return render(request, 'students/student_detail.html', {'student': student})
+
+class StudentCreate(CreateView):
+    model = Student
+    fields = '__all__'
+    success_url = '/students/'
+    
+
+class StudentUpdate(UpdateView):
+    model = Student
+    fields = '__all__'
+    success_url = '/students/'
+
+    
+class StudentDelete(DeleteView):
+    model = Student
+    success_url = '/students/'

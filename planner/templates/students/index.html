@@ -13,8 +13,7 @@
 <section class="card-container">
   {% for student in students %}
   <div class="card">
-    <!-- <a href="/classrooms/{{classroom.id}}"> -->
-    <a>
+    <a href="{% url 'student-detail' student.student_id %} ">
       <div class="card-content">
         <div class="card-img-container">
           <img src="{% static 'images/student.png' %}" alt="A classroom " />
