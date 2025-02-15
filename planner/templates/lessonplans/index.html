@@ -16,7 +16,7 @@
 <section class="card-container">
   {% for lessonplans in lessonplans %}
   <div class="card">
-    <a href="/lessonplans/{{plan.id}}"></a>
+    <a href="{% url 'lessonplan-detail' lessonplans.plan_id %}" />
     <div class="card-content">
       <div class="card-img-container">
         <img src="{% static 'images/pencil.jpeg' %}" alt="A lesson plan" />

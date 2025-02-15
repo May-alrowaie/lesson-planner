@@ -46,6 +46,9 @@ def lessonplan_index(request):
     return render(request, 'lessonplans/index.html', {'lessonplans': lessonplans})
 
 def lessonplan_detail(request, plan_id):
-    lessonplan = get_object_or_404(LessonPlan, plan_id=plan_id)
+    lessonplan = LessonPlan.objects.get(plan_id=plan_id)
     return render(request, 'lessonplans/lessonplan_detail.html', {'lessonplan': lessonplan})
 
+
+
+    

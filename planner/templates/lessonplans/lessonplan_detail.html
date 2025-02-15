@@ -1,22 +1,22 @@
 {% extends 'base.html' %} {% load static %} {% block head %}
-<!-- <link
+<link
   rel="stylesheet"
-  href="{% static 'css/classrooms/classroom-detail.css' %}"
-/> -->
+  href="{% static 'css/lessonplans/lessonplan-detail.css' %}"
+/>
 {% endblock %} {% block content %}
 <section class="lessonplan-container">
   <div class="lessonplan-img">
     <img src="{% static 'images/lessonp.jpeg' %}" alt="A lessonplan" />
   </div>
   <div class="lessonplan-details">
-    <h2>Lesson Plan Details</h2>
+    <h1>Lesson Plan Details</h1>
 
     <p>lessonplan ID: {{ lessonplan.plan_id }}</p>
 
-    <h1>User: {{ lessonplan.user }}</h1>
-    <h1>Lesson Title: {{ lessonplan.title }}</h1>
-    <h1>Subject: {{ lessonplan.subject_id }}</h1>
-    <h1>Classroom: {{ lessonplan.classroom }}</h1>
+    <h2>User: {{ lessonplan.user }}</h2>
+    <h2>Lesson Title: {{ lessonplan.title }}</h2>
+    <h2>Subject: {{ lessonplan.subject_id }}</h2>
+    <h2>Classroom: {{ lessonplan.classroom }}</h2>
 
     <p>Grade Level: {{ lessonplan.grade_level }}</p>
     <p>Division: {{ lessonplan.division }}</p>
