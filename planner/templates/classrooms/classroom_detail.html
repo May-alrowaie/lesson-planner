@@ -10,13 +10,23 @@
   </div>
   <div class="classroom-details">
     <h2>Classroom Details</h2>
+    <p>Classroom ID: {{ classroom.classroom_id }}</p>
     <h1>Grade: {{ classroom.grade }}</h1>
     <h1>Division: {{ classroom.division }}</h1>
     <p>Students List: {{ classroom.students_list }}</p>
     <p>Feedback: {{ classroom.feedback }}</p>
     <div class="classroom-actions">
-      <a class="btn warn">Edit</a>
-      <a class="btn danger">Delete</a>
+      <a
+        href="{% url 'classroom-update' classroom.classroom_id %}"
+        class="btn warn"
+        >Edit</a
+      >
+      <a
+        a
+        href="{% url 'classroom-delete' classroom.classroom_id %}"
+        class="btn danger"
+        >Delete</a
+      >
     </div>
   </div>
 </section>

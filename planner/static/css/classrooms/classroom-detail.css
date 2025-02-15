@@ -7,8 +7,9 @@
 }
 
 .classroom-img {
-  width: 75%;
-  max-width: 350px;
+  width: 50%; /* 50% of its container */
+  max-width: 300px; /* Never exceed 300px */
+  height: auto;
 }
 
 .usr-img {

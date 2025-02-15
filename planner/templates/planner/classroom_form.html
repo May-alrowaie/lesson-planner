@@ -3,7 +3,13 @@
 {% endblock %} {% block content %}
 
 <div class="page-header">
+  <!-- Check if a cat object exists to determine if we're editing -->
+  {% if classroom %}
+  <h1>Edit {{ classroom.name }}</h1>
+  {% else %}
+
   <h1>Add a Classroom</h1>
+  {% endif %}
   <img
     src="{% static 'images/kidsteacher.jpg' %}"
     alt="A teacher with students"

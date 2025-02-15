@@ -21,10 +21,12 @@ class ClassroomCreate(CreateView):
 class ClassroomUpdate(UpdateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
+    success_url = '/classrooms/'
+
     
 class ClassroomDelete(DeleteView):
     model = Classroom
-    success_url = '/classrooms/'
+    success_url = '/classroom/'
 
 
 def classroom_index(request):
@@ -34,6 +36,7 @@ def classroom_index(request):
 def classroom_detail(request, classroom_id):
     classroom = get_object_or_404(Classroom, classroom_id=classroom_id)
     return render(request, 'classrooms/classroom_detail.html', {'classroom': classroom})
+
 
 
 
