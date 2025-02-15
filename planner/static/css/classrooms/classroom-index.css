@@ -1,4 +1,4 @@
-/* .card-container {
+.card-container {
   padding: 0 30px;
   display: flex;
   justify-content: center;
@@ -35,9 +35,8 @@
 .card p {
   margin: 5px 0;
   font-size: var(--font-reg);
-} */
-
-.card-container {
+}
+*/ .card-container {
   display: flex; /* Arrange cards in a row */
   flex-wrap: wrap; /* Wrap to next row if needed */
   justify-content: center; /* Center align cards */

@@ -16,12 +16,13 @@
 <section class="card-container">
   {% for classroom in classrooms %}
   <div class="card">
-    <a href="/classrooms/{{classroom.id}}">
+    <!-- <a href="/classrooms/{{classroom.id}}"> -->
+    <a href="{% url 'classroom-detail' classroom.classroom_id %}">
       <div class="card-content">
         <div class="card-img-container">
           <img src="{% static 'images/classroom.svg' %}" alt="A classroom " />
         </div>
-        <h2 class="card-title">Division: {{ classroom.division}}</h2>
+        <h2 class="card-title">Division:{{ classroom.division}}</h2>
         <h3>Grade: {{ classroom.grade }}</h3>
       </div>
     </a>

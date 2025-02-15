@@ -26,12 +26,9 @@ class Classroom(models.Model):
         return f"{self.grade} - {self.division}"
     
     def get_absolute_url(self):
-        return reverse('classroom-detail', kwargs={'classroom_id': self.id})
+        return reverse('classroom-detail', kwargs={'classroom_id': classroom_id})
     
-        """Convert students_list string into a list????"""
-    # def get_students(self):
-    #     return self.students_list.split(",") if self.students_list else []
-
+    
 class LessonPlan(models.Model):
     plan_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='lesson_plans')
