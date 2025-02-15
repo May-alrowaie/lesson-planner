@@ -1,15 +1,18 @@
 {% extends 'base.html' %} {% load static %} {% block head %}
-<link rel="stylesheet" href="{% static 'css/form.css' %}" />
+<link rel="stylesheet" href="{% static 'css/classroom_form.css' %}" />
 {% endblock %} {% block content %}
 
 <div class="page-header">
-  {% if lessonplan %}
-  <h1>Edit {{ lessonplan.title }}</h1>
+  {% if classroom %}
+  <h1>Edit {{ classroom.name }}</h1>
   {% else %}
 
-  <h1>Create a Lesson Plan</h1>
+  <h1>Add a Classroom</h1>
   {% endif %}
-  <img src="{% static 'images/lessonplan.jpeg' %}" alt="A lesson plan" />
+  <img
+    src="{% static 'images/kidsteacher.jpg' %}"
+    alt="A teacher with students"
+  />
 </div>
 
 <form action="" method="post" class="form-container">
