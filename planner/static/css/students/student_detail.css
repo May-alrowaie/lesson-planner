@@ -9,6 +9,7 @@
 .student-img {
   width: 75%;
   max-width: 350px;
+  align-items: center;
 }
 
 .usr-img {
@@ -18,6 +19,9 @@
 
 .student-details {
   width: 98%;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
 }
 
 .student-actions {
@@ -87,6 +91,8 @@
 .student-details h3 {
   margin: 20px 0 10px;
   font-size: var(--font-l);
+  justify-content: center;
+  align-items: center;
 }
 
 .student-details p {
