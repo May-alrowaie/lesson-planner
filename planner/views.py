@@ -1,6 +1,6 @@
 from django.shortcuts import render , get_object_or_404, redirect
 # from django.http import HttpResponse
-from django.views.generic.edit import CreateView, UpdateView, DeleteView    
+from django.views.generic.edit import CreateView, UpdateView, DeleteView   
 from .models import Classroom , LessonPlan , Student , User
 
 
@@ -50,5 +50,20 @@ def lessonplan_detail(request, plan_id):
     return render(request, 'lessonplans/lessonplan_detail.html', {'lessonplan': lessonplan})
 
 
+class LessonPlanCreate(CreateView):
+    model = LessonPlan
+    fields = '__all__'
+    success_url = '/lessonplans/'
+    
+
+class LessonPlanUpdate(UpdateView):
+    model = LessonPlan
+    fields = '__all__'
+    success_url = '/lessonplans/'
+
+    
+class LessonPlanDelete(DeleteView):
+    model = LessonPlan
+    success_url = '/lessonplans/'
 
     

@@ -50,8 +50,8 @@ class LessonPlan(models.Model):
     def __str__(self):
         return self.title
     
-    # def get_absolute_url(self):
-    #    return reverse('lessonplan-detail', kwargs={'plan_id': self.plan_id})
+    def get_absolute_url(self):
+        return reverse('lessonplan-detail', kwargs={'plan_id': self.plan_id})
     
 class Student(models.Model):
     student_id = models.AutoField(primary_key=True)

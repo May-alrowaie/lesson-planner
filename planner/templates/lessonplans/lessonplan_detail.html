@@ -31,6 +31,18 @@
     <p>Assessment: {{ lessonplan.assessment }}</p>
     <p>Technology Used: {{ lessonplan.technology_used }}</p>
     <p>Plan B: {{ lessonplan.plan_b }}</p>
+    <div class="lessonplan-actions">
+      <a
+        href="{% url 'lessonplan-update' lessonplan.plan_id %}"
+        class="btn warn"
+        >Edit</a
+      >
+      <a
+        href="{% url 'lessonplan-delete' lessonplan.plan_id %}"
+        class="btn danger"
+        >Delete</a
+      >
+    </div>
   </div>
 </section>
 {% endblock %}
