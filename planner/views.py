@@ -15,7 +15,7 @@ class ClassroomCreate(CreateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
     # fields = '__all__'
-    success_url = '/classroom/'
+    success_url = '/classrooms/'
 
 
 class ClassroomUpdate(UpdateView):
