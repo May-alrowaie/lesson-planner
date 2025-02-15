@@ -19,9 +19,9 @@ class Classroom(models.Model):
     feedback = models.TextField(blank=True, null=True)
 
     def __str__(self):
-        return self.name
+        # return self.name
 
-        # return f"{self.grade} - {self.division}"
+        return f"{self.grade} - {self.division}"
     
     def get_absolute_url(self):
         return reverse('classroom-detail', kwargs={'classroom_id': self.classroom_id})
@@ -49,6 +49,9 @@ class LessonPlan(models.Model):
 
     def __str__(self):
         return self.title
+    
+    # def get_absolute_url(self):
+    #     return reverse('lessonplan-detail', kwargs={'plan_id': self.plan_id})
     
 class Student(models.Model):
     student_id = models.AutoField(primary_key=True)

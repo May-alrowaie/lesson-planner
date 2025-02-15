@@ -1,7 +1,7 @@
 from django.shortcuts import render , get_object_or_404, redirect
 # from django.http import HttpResponse
 from django.views.generic.edit import CreateView, UpdateView, DeleteView    
-from .models import Classroom 
+from .models import Classroom , LessonPlan , Student , User
 
 
 def home(request):
@@ -10,15 +10,14 @@ def home(request):
 def about(request):
     return render(request, 'about.html')
 
+ #CLASSROOMS:
 
 class ClassroomCreate(CreateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
     # fields = '__all__'
     # success_url = '/classrooms/'
-    def form_valid(self, form):
-        form.instance.user = self.request.user
-        return super().form_valid(form)
+    
 
 
 class ClassroomUpdate(UpdateView):
@@ -40,6 +39,13 @@ def classroom_detail(request, classroom_id):
     classroom = get_object_or_404(Classroom, classroom_id=classroom_id)
     return render(request, 'classrooms/classroom_detail.html', {'classroom': classroom})
 
+#LESSONPLANS:
 
+def lessonplan_index(request):
+    lessonplans = LessonPlan.objects.all()
+    return render(request, 'lessonplans/index.html', {'lessonplans': lessonplans})
 
+def lessonplan_detail(request, plan_id):
+    lessonplan = get_object_or_404(LessonPlan, plan_id=plan_id)
+    return render(request, 'lessonplans/lessonplan_detail.html', {'lessonplan': lessonplan})
 

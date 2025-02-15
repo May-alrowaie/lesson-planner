@@ -1,0 +1,36 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<!-- <link
+  rel="stylesheet"
+  href="{% static 'css/classrooms/classroom-detail.css' %}"
+/> -->
+{% endblock %} {% block content %}
+<section class="lessonplan-container">
+  <div class="lessonplan-img">
+    <img src="{% static 'images/lessonp.jpeg' %}" alt="A lessonplan" />
+  </div>
+  <div class="lessonplan-details">
+    <h2>Lesson Plan Details</h2>
+
+    <p>lessonplan ID: {{ lessonplan.plan_id }}</p>
+
+    <h1>User: {{ lessonplan.user }}</h1>
+    <h1>Lesson Title: {{ lessonplan.title }}</h1>
+    <h1>Subject: {{ lessonplan.subject_id }}</h1>
+    <h1>Classroom: {{ lessonplan.classroom }}</h1>
+
+    <p>Grade Level: {{ lessonplan.grade_level }}</p>
+    <p>Division: {{ lessonplan.division }}</p>
+    <p>Duration: {{ lessonplan.duration }}</p>
+    <p>Date: {{ lessonplan.date }}</p>
+    <p>Lesson Objectives: {{ lessonplan.objectives }}</p>
+    <p>Integration with other subjects: {{ lessonplan.integration }}</p>
+    <p>Description: {{ lessonplan.description }}</p>
+    <p>Teaching Strategy: {{ lessonplan.teaching_strategy }}</p>
+    <p>Activity Level: {{ lessonplan.activity_level }}</p>
+    <p>Activities: {{ lessonplan.activities }}</p>
+    <p>Assessment: {{ lessonplan.assessment }}</p>
+    <p>Technology Used: {{ lessonplan.technology_used }}</p>
+    <p>Plan B: {{ lessonplan.plan_b }}</p>
+  </div>
+</section>
+{% endblock %}

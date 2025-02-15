@@ -1,0 +1,32 @@
+{% extends 'base.html' %} {% load static %} {% block head %}
+<link
+  rel="stylesheet"
+  href="{% static 'css/lessonplans/lessonplan-index.css' %}"
+/>
+{% endblock %} {% block content %}
+
+<section class="page-header">
+  <h1>Your Lesson Plans</h1>
+  <!-- <img src="{% static 'images/cool-cat.svg' %}" alt="A cool cat" />
+  <img src="{% static 'images/happy-cat.svg' %}" alt="A happy cat" />
+  <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
+  <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" /> -->
+</section>
+
+<section class="card-container">
+  {% for lessonplans in lessonplans %}
+  <div class="card">
+    <a href="/lessonplans/{{plan.id}}"></a>
+    <div class="card-content">
+      <div class="card-img-container">
+        <img src="{% static 'images/pencil.jpeg' %}" alt="A lesson plan" />
+      </div>
+      <h2 class="card-title">{{ lessonplans.title }}</h2>
+
+      <p><small>{{ lessonplans.subject_id }}</small></p>
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+{% endblock %}
