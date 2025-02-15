@@ -15,7 +15,10 @@ class ClassroomCreate(CreateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
     # fields = '__all__'
-    success_url = '/classrooms/'
+    # success_url = '/classrooms/'
+    def form_valid(self, form):
+        form.instance.user = self.request.user
+        return super().form_valid(form)
 
 
 class ClassroomUpdate(UpdateView):
@@ -26,7 +29,7 @@ class ClassroomUpdate(UpdateView):
     
 class ClassroomDelete(DeleteView):
     model = Classroom
-    success_url = '/classroom/'
+    success_url = '/classrooms/'
 
 
 def classroom_index(request):

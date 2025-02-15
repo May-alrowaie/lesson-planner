@@ -24,7 +24,7 @@ class Classroom(models.Model):
         # return f"{self.grade} - {self.division}"
     
     def get_absolute_url(self):
-        return reverse('classroom-detail', kwargs={'classroom_id': self.id})
+        return reverse('classroom-detail', kwargs={'classroom_id': self.classroom_id})
     
     
 class LessonPlan(models.Model):
