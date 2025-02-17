@@ -85,4 +85,75 @@ main > section {
   .logo-container {
     max-width: 520px;
   }
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 50px;
+    background-color: #f9f9f9;
+  }
+  .container {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    max-width: 600px;
+    margin: auto;
+  }
+  h1 {
+    color: #2c3e50;
+  }
+  p {
+    font-size: 18px;
+    color: #555;
+  }
+
+  .image-container img {
+    width: 100%; /* جعل الصورة تأخذ العرض الكامل داخل الحاوية */
+    max-width: 200px; /* تقليل الحد الأقصى لحجم الصورة */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  }
+
+  .dedication-container {
+    display: flex;
+    align-items: center; /* محاذاة النص والصورة عموديًا */
+    justify-content: space-between; /* توزيع المساحة بين النص والصورة */
+    background: white;
+    padding: 20px; /* زيادة الحشوة داخل المربع */
+    border-radius: 10px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+    max-width: 1170px; /* زيادة العرض بنسبة 30% */
+    margin: auto;
+  }
+
+  .dedication-text {
+    flex: 1; /* السماح للنص بأخذ المساحة المتاحة */
+    padding: 10px; /* تقليل الحشوة في النص */
+  }
+
+  h2 {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 20px; /* تقليل حجم العنوان */
+  }
+
+  p {
+    font-size: 14px; /* تقليل حجم الخط */
+    color: #555;
+    line-height: 1.4;
+  }
+
+  strong {
+    color: #2c3e50;
+  }
+
+  /* .dedication-image {
+    width: 50%;
+    text-align: center;
+  }
+  .dedication-image img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 10px;
+  } */
 }

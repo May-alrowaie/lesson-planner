@@ -4,19 +4,61 @@
 
 <section class="logo-container">
   <img
-    src="{% static 'images/lessonpb5.png' %}"
+    src="{% static 'images/moe1.png' %}"
     alt="Text reads: Lesson Plan Generator"
   />
-  <h2>
-    Create lesson plans effortlessly and manage your classrooms efficiently.
-  </h2>
 
-  <div class="classroom-container">
+  <section class="logo-container">
     <img
-      src="{% static 'images/lessonteach.png' %}"
-      alt="The Lesson Plan Generator"
+      src="{% static 'images/lessonpb5.png' %}"
+      alt="Text reads: Lesson Plan Generator"
     />
+    <h2>
+      Create lesson plans effortlessly and manage your classrooms efficiently.
+    </h2>
+    <section>
+      <form action="{% url 'home' %}" method="post" class="login">
+        <h1>Login</h1>
+        {% csrf_token %} {{ form.as_p }}
+        <input type="hidden" name="next" value="{{ next }}" />
+        <button type="submit" class="btn submit">Login</button>
+      </form>
+    </section>
+    <div class="dedication-image">
+      <img src="{% static 'images/lessonteach1.png' %}" alt="إهداء" />
+    </div>
+  </section>
+  <div class="dedication-container">
+    <div class="dedication-text">
+      <h2>إهداء</h2>
+      <p>
+        إلى المديرة الفاضلة <strong>الأستاذة نوف علي المالكي</strong>، وإلى
+        المديرة المساعدة <strong>الأستاذة شيخة نبيل الحمد</strong>،
+      </p>
+      <p>
+        أتقدم إليكما بأسمى آيات الشكر والتقدير، فبفضل توجيهاتكما ودعمكما المستمر
+        تحقق هذا الإنجاز.
+      </p>
+      <p>
+        إلى <strong>الأستاذة نوف علي المالكي</strong>، كان لتيسيركِ الأمور
+        ورؤيتكِ الحكيمة الدور الأكبر في تمهيد الطريق أمامي، مما جعل رحلتي أكثر
+        سلاسة وإبداعًا.
+      </p>
+      <p>
+        وإلى <strong>الأستاذة شيخة نبيل الحمد</strong>، كان لتشجيعكِ المستمر
+        وإيمانكِ بقدراتي الأثر العميق في دفعي نحو تطوير ذاتي، والسعي نحو التميز
+        في هذا العمل.
+      </p>
+      <p>
+        فلكما مني كل الامتنان والتقدير، وأسأل الله أن يجعل جهودكما نورًا ينير
+        طريق العلم والمعرفة.
+      </p>
+      <p><strong>مع خالص التقدير والاحترام،</strong></p>
+      <p>الأستاذة مي عبد الرحمن الرويعي</p>
+      <p>معلمة العلوم - تخصص الأحياء</p>
+      <p>مدرسة الرفاع الغربي الثانوية للبنات</p>
+    </div>
   </div>
-</section>
 
-{% endblock %}
+  {% endblock %}
+</section>

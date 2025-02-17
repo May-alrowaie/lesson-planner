@@ -1,31 +1,37 @@
 from django.shortcuts import render , get_object_or_404, redirect
 # from django.http import HttpResponse
-from django.views.generic.edit import CreateView, UpdateView, DeleteView   
-from .models import Classroom , LessonPlan , Student , User
+from django.views.generic.edit import CreateView, UpdateView, DeleteView
+from .models import Classroom , LessonPlan , Student , User 
+from django.contrib.auth.views import LoginView 
 
 
-def home(request):
-    return render(request, 'home.html')
+class Home(LoginView):
+    template_name = 'home.html'
+    # success_url = 'home.html'
+
+
+# def home(request):
+#     return render(request, 'home.html')
 
 def about(request):
     return render(request, 'about.html')
 
- #CLASSROOMS:
+#CLASSROOMS:
 
 class ClassroomCreate(CreateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
     # fields = '__all__'
-    # success_url = '/classrooms/'
+    # success_url = '/classrooms/classroom_detail.html'
     
 
 
 class ClassroomUpdate(UpdateView):
     model = Classroom
     fields = ['grade', 'division', 'students_list', 'feedback']
-    success_url = '/classrooms/'
+    # success_url = '/classrooms/'
 
-    
+
 class ClassroomDelete(DeleteView):
     model = Classroom
     success_url = '/classrooms/'
@@ -59,7 +65,7 @@ class LessonPlanCreate(CreateView):
 class LessonPlanUpdate(UpdateView):
     model = LessonPlan
     fields = '__all__'
-    success_url = '/lessonplans/'
+    # success_url = '/lessonplans/'
 
     
 class LessonPlanDelete(DeleteView):
@@ -91,3 +97,7 @@ class StudentUpdate(UpdateView):
 class StudentDelete(DeleteView):
     model = Student
     success_url = '/students/'
+
+
+print("Views.py is being loaded!")  # Add this in views.py
+from planner.views import Home
