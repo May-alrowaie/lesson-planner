@@ -1,19 +1,6 @@
 /* body {
   background-color: red;
 } */
-.linkedin-button {
-  display: inline-block;
-  background-color: #0077b5; /* LinkedIn Blue */
-  color: white;
-  padding: 10px 15px;
-  border-radius: 5px;
-  text-decoration: none;
-  font-weight: bold;
-}
-
-.linkedin-button:hover {
-  background-color: #005582;
-}
 
 #logout-form button {
   text-decoration: none;

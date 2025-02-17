@@ -38,7 +38,8 @@ urlpatterns = [
     path('students/<int:pk>/update/', views.StudentUpdate.as_view(), name='student-update'),
     path('students/<int:pk>/delete/', views.StudentDelete.as_view(), name='student-delete'),
 
-#USER URLS  
+    path('accounts/signup/', views.signup, name='signup'),
+
 
 ]
 
