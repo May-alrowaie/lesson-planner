@@ -176,4 +176,30 @@ main > section {
     max-height: 100%;
     border-radius: 15px;
   }
+  .linkedin-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #0077b5; /* LinkedIn Blue */
+    color: white;
+    padding: 12px 20px;
+    border-radius: 30px;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  }
+
+  .linkedin-button:hover {
+    background-color: #005582;
+    transform: scale(1.05);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.3);
+  }
+
+  .linkedin-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+  }
 }

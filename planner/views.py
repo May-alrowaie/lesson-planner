@@ -23,7 +23,10 @@ class ClassroomCreate(CreateView):
     fields = ['grade', 'division', 'students_list', 'feedback']
     # fields = '__all__'
     # success_url = '/classrooms/classroom_detail.html'
-    
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super().form_valid(form)    
 
 
 class ClassroomUpdate(UpdateView):
@@ -60,6 +63,10 @@ class LessonPlanCreate(CreateView):
     model = LessonPlan
     fields = '__all__'
     success_url = '/lessonplans/'
+
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super().form_valid(form)    
     
 
 class LessonPlanUpdate(UpdateView):
@@ -86,6 +93,9 @@ class StudentCreate(CreateView):
     model = Student
     fields = '__all__'
     success_url = '/students/'
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super().form_valid(form)        
     
 
 class StudentUpdate(UpdateView):
@@ -98,6 +108,6 @@ class StudentDelete(DeleteView):
     model = Student
     success_url = '/students/'
 
-
-print("Views.py is being loaded!")  # Add this in views.py
+###???
+print("Views.py is being loaded!") 
 from planner.views import Home

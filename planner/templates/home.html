@@ -18,16 +18,21 @@
     </h2>
 
     <section class="login-container">
+      {% if not user.is_authenticated %}
+
       <form action="{% url 'home' %}" method="post" class="login">
         <h1>Login</h1>
         {% csrf_token %} {{ form.as_p }}
         <input type="hidden" name="next" value="{{ next }}" />
         <button type="submit" class="btn submit">Login</button>
       </form>
+      {% endif %}
+
       <div class="dedication-image">
         <img src="{% static 'images/lessonteach1.png' %}" alt="إهداء" />
       </div>
     </section>
+
     <div class="dedication-container">
       <div class="dedication-text">
         <h2>إهداء</h2>
@@ -57,6 +62,19 @@
         <p>الأستاذة مي عبد الرحمن الرويعي</p>
         <p>معلمة العلوم - تخصص الأحياء</p>
         <p>مدرسة الرفاع الغربي الثانوية للبنات</p>
+
+        <a
+          href="https://www.linkedin.com/in/may-alrowaie/"
+          target="_blank"
+          class="linkedin-button"
+        >
+          <img
+            src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+            alt="LinkedIn"
+            class="linkedin-icon"
+          />
+          Connect with me on LinkedIn
+        </a>
       </div>
     </div>
 
