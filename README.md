@@ -1,4 +1,6 @@
-#### LESSON PLAN GENERATOR your school management tool app
+#### Lesson Plan Generator - Django Python Project
+
+## Project Overview
 
 The Lesson Plan Generator is a web application built using Django and Python that allows teachers to create, manage, and organize lesson plans efficiently. This tool helps educators structure their teaching materials, assign lesson plans to classrooms, and track student progress.
 
