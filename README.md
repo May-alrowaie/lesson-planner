@@ -65,25 +65,25 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 
 ## Screenshots
 
-![Homepage](image.png)
-![About](image-1.png)
-![Sign-in](image-2.png)
-![View-all-classroom](image-3.png)
-![View-all-students](image-4.png)
-![View-all-lesson plans](image-5.png)
-![view-a single classroom](image-7.png)
-![view-a single student](image-7.png)
-![view-a single lesson plan](image-7.png)
-![create-a classroom-form](image-8.png)
-![create-student-form](image-8.png)
-![create-lesson plan-form](image-8.png)
-![enter-sign up-form](image-8.png)
-![edit-a-classroom](image-11.png)
-![edit-an-student](image-10.png)
-![edit-an-lesson plan](image-10.png)
-![delete-a-classroom](image-11.png)
-![delete-an-student](image-10.png)
-![delete-an-lesson plan](image-10.png)
+![Homepage](planner/static/images/.png)
+
+![About](planner/static/images/.png)
+![Sign-in](planner/static/images/.png)
+![View-all-classroom](planner/static/images/.png)
+![View-all-students](planner/static/images/.png)
+![View-all-lesson plans](planner/static/images/.png)
+![view-a single classroom](planner/static/images/.png)
+![view-a single student](planner/static/images/.png)
+![view-a single lesson plan](planner/static/images/.png)
+![create-a classroom-form](planner/static/images/.png)
+![create-student-form](planner/static/images/.png)
+![create-lesson plan-form](planner/static/images/.png)
+![enter-sign up-form](planner/static/images/.png)
+![edit-a-classroom](planner/static/images/.png)
+![edit-an-student](planner/static/images/.png)
+![edit-an-lesson plan](planner/static/images/.png)
+![delete-a-classroom](planner/static/images/.png)
+![delete-an-lesson plan](planner/static/images/.png)
 
 ## Project Links
 
@@ -99,39 +99,40 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 
 ## Technologies Used
 
-Backend: Django (Python)
+**Backend**: Django (Python)
 
-Frontend: HTML, CSS
+**Frontend**: HTML, CSS
 
-Database: PostgreSQL
+**Database**: PostgreSQL
 
-Authentication: Django User Authentication
+**Authentication**: Django User Authentication
 
 ## Installation
 
-1-Clone the repository:
+1-**Clone the repository**:
 
 git clone https://github.com/May-alrowaie/lesson-planner.git
 
-2- cd lesson-planner
+cd lesson-planner
 
-3- Install dependencies:
+2- **Install dependencies**:
 
 pip install
 
-4- Run database migrations:
+3- **Run database migrations**:
 
 python manage.py migrate
 
-5- Create a superuser:
+4- **Create a superuser**:
 
 python manage.py create superuser
 
-6- Start the server:
+5- **Start the server**:
 
 python manage.py runserver
 
-7-Access the application at http://127.0.0.1:8000/
+6-**Access the application**:
+at http://127.0.0.1:8000/
 
 ## Planned Future Enhancements
 
