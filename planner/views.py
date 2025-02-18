@@ -126,9 +126,7 @@ class StudentDelete(LoginRequiredMixin, DeleteView):
     model = Student
     success_url = '/students/'
 
-###???
-print("Views.py is being loaded!") 
-from planner.views import Home
+
 
 #signup:
 def signup(request):
