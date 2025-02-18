@@ -91,11 +91,11 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 
 ### Initial ERD
 
-![Initial-ERD](planner/static/css/erd_lp.png)
+![Initial-ERD](planner/static/images/erd_lp.png)
 
 ### Revised ERD:
 
-![Revised-ERD](planner/static/css/erd.png)
+![Revised-ERD](planner/static/images/erd.png)
 
 ## Technologies Used
 
