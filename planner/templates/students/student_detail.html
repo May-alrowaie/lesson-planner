@@ -13,15 +13,16 @@
 
     <h2>Name: {{ student.name}}</h2>
     <h2>Grade: {{ student.grade }}</h2>
-    <h2>Division: {{ student.division }}</h2>
 
-    <p>Students Level: {{ student.students_level }}</p>
-    <p>Activity Level: {{ student.activity_level }}</p>
-    <p>Learning Style: {{ student.learning_style }}</p>
-    <p>Multiple_intelligence: {{ student.multiple_intelligence }}</p>
-    <p>Special_needs: {{ student.special_needs }}</p>
-    <p>Parent_info: {{ student.parent_info }}</p>
-    <p>Feedback: {{ student.feedback }}</p>
+    <p><strong>Students Level:</strong> {{ student.student_level }}</p>
+    <p><strong>Activity Level: </strong>{{ student.activity_level }}</p>
+    <p><strong>Learning Style:</strong> {{ student.learning_style }}</p>
+    <p>
+      <strong>Multiple_intelligence:</strong> {{ student.multiple_intelligence
+      }}
+    </p>
+    <p><strong>Special_needs:</strong> {{ student.special_needs }}</p>
+    <p><strong>Parent_info:</strong> {{ student.parent_info }}</p>
     <div class="student-actions">
       <a href="{% url 'student-update' student.student_id %}" class="btn warn"
         >Edit</a

@@ -11,26 +11,31 @@
   <div class="lessonplan-details">
     <h1>Lesson Plan Details</h1>
 
-    <p>lessonplan ID: {{ lessonplan.plan_id }}</p>
+    <p><strong>lessonplan ID:</strong> {{ lessonplan.plan_id }}</p>
 
-    <h2>User: {{ lessonplan.user }}</h2>
-    <h2>Lesson Title: {{ lessonplan.title }}</h2>
-    <h2>Subject: {{ lessonplan.subject_id }}</h2>
-    <h2>Classroom: {{ lessonplan.classroom }}</h2>
+    <h2><strong>User:</strong> {{ lessonplan.user }}</h2>
+    <h2><strong>Lesson Title:</strong> {{ lessonplan.title }}</h2>
+    <h2><strong>Subject:</strong> {{ lessonplan.subject_id }}</h2>
+    <h2><strong>Classroom:</strong> {{ lessonplan.classroom }}</h2>
 
-    <p>Grade Level: {{ lessonplan.grade_level }}</p>
-    <p>Division: {{ lessonplan.division }}</p>
-    <p>Duration: {{ lessonplan.duration }}</p>
-    <p>Date: {{ lessonplan.date }}</p>
-    <p>Lesson Objectives: {{ lessonplan.objectives }}</p>
-    <p>Integration with other subjects: {{ lessonplan.integration }}</p>
-    <p>Description: {{ lessonplan.description }}</p>
-    <p>Teaching Strategy: {{ lessonplan.teaching_strategy }}</p>
-    <p>Activity Level: {{ lessonplan.activity_level }}</p>
-    <p>Activities: {{ lessonplan.activities }}</p>
-    <p>Assessment: {{ lessonplan.assessment }}</p>
-    <p>Technology Used: {{ lessonplan.technology_used }}</p>
-    <p>Plan B: {{ lessonplan.plan_b }}</p>
+    <p><strong>Grade Level:</strong> {{ lessonplan.grade_level }}</p>
+    <p><strong>Division:</strong> {{ lessonplan.division }}</p>
+    <p><strong>Duration:</strong> {{ lessonplan.duration }}</p>
+    <p><strong>Date:</strong> {{ lessonplan.date }}</p>
+    <p><strong>Lesson Objectives:</strong> {{ lessonplan.objectives }}</p>
+    <p>
+      <strong>Integration with other subjects:</strong> {{
+      lessonplan.integration }}
+    </p>
+    <p><strong>Description:</strong> {{ lessonplan.description }}</p>
+    <p>
+      <strong>Teaching Strategy:</strong> {{ lessonplan.teaching_strategy }}
+    </p>
+    <p><strong>Activity Level:</strong> {{ lessonplan.activity_level }}</p>
+    <p><strong>Activities: </strong>{{ lessonplan.activities }}</p>
+    <p><strong>Assessment:</strong> {{ lessonplan.assessment }}</p>
+    <p><strong>Technology Used:</strong> {{ lessonplan.technology_used }}</p>
+    <p><strong>Plan B: </strong>{{ lessonplan.plan_b }}</p>
     <div class="lessonplan-actions">
       <a
         href="{% url 'lessonplan-update' lessonplan.plan_id %}"

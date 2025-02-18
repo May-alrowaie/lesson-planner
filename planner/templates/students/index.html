@@ -21,11 +21,9 @@
         <h2 class="card-title">Name:{{ student.name}}</h2>
         <h3>Grade: {{ student.grade }}</h3>
         {% if student.level > 50 %}
-        <p>
-          This {{ student.level }} Student is a High Achiever {{ student.grade}}
-        </p>
+        <p>{{ student.level }} Student is a High Achiever {{ student.grade}}</p>
         {% else %}
-        <p>This{{ student.level }} Student is Weak and Needs Help.</p>
+        <p>{{ student.level }}</p>
         {% endif %}
       </div>
     </a>
