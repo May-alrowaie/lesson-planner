@@ -2,7 +2,7 @@ from django.shortcuts import render , get_object_or_404, redirect
 # from django.http import HttpResponse
 from django.views.generic import ListView, DetailView
 from django.views.generic.edit import CreateView, UpdateView, DeleteView
-from .models import Classroom , LessonPlan , Student , User 
+from .models import Classroom , LessonPlan , Student 
 from django.contrib.auth.views import LoginView 
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.contrib.auth.models import User
@@ -33,9 +33,9 @@ class ClassroomCreate(LoginRequiredMixin,CreateView):
     # fields = '__all__'
     # success_url = '/classrooms/classroom_detail.html'
 
-    # def form_valid(self, form):
-    #     form.instance.user = self.request.user  
-    #     return super().form_valid(form)
+    def form_valid(self, form):
+        form.instance.user = self.request.user  
+        return super().form_valid(form)
     
 
 class ClassroomUpdate(LoginRequiredMixin, UpdateView):
@@ -54,20 +54,20 @@ def classroom_index(request):
     # classrooms = Classroom.objects.filter(user=request.user)
     return render(request, 'classrooms/index.html', {'classrooms': classrooms})  
 
-# @login_required
+@login_required
 def classroom_detail(request, classroom_id):
     classroom = get_object_or_404(Classroom, classroom_id=classroom_id)
     return render(request, 'classrooms/classroom_detail.html', {'classroom': classroom})
 
 #LESSONPLANS:
 
-# @login_required
+@login_required
 def lessonplan_index(request):
-    lessonplans = LessonPlan.objects.all()
-    # lessonplans = LessonPlan.objects.filter(user=request.user)
+    # lessonplans = LessonPlan.objects.all()
+    lessonplans = LessonPlan.objects.filter(user=request.user)
     return render(request, 'lessonplans/index.html', {'lessonplans': lessonplans})
 
-# @login_required
+@login_required
 def lessonplan_detail(request, plan_id):
     lessonplan = LessonPlan.objects.get(plan_id=plan_id)
     return render(request, 'lessonplans/lessonplan_detail.html', {'lessonplan': lessonplan})
@@ -78,9 +78,9 @@ class LessonPlanCreate(LoginRequiredMixin, CreateView):
     fields = '__all__'
     success_url = '/lessonplans/'
 
-    # def form_valid(self, form):
-    #     form.instance.user = self.request.user 
-    #     return super().form_valid(form)    
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super().form_valid(form)    
     
 
 class LessonPlanUpdate(LoginRequiredMixin, UpdateView):
@@ -94,13 +94,13 @@ class LessonPlanDelete(LoginRequiredMixin, DeleteView):
     success_url = '/lessonplans/'
 
 #STUDENTS:
-# @login_required
+@login_required
 def student_index(request):
     students = Student.objects.all()     
     # students = Student.objects.filter(user=request.user)
     return render(request, 'students/index.html', {'students': students}) 
 
-# @login_required
+@login_required
 def student_detail(request, student_id):
     student = get_object_or_404(Student, student_id=student_id)
     return render(request, 'students/student_detail.html', {'student': student})
@@ -111,9 +111,9 @@ class StudentCreate(LoginRequiredMixin, CreateView):
     success_url = '/students/'
 
 
-    # def form_valid(self, form):
-    #     form.instance.user = self.request.user 
-    #     return super().form_valid(form)        
+    def form_valid(self, form):
+        form.instance.user = self.request.user 
+        return super().form_valid(form)        
     
 
 class StudentUpdate(LoginRequiredMixin, UpdateView):
