@@ -91,11 +91,11 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 
 ### Initial ERD
 
-![Initial-ERD](css/erd_lp.png)
+![Initial-ERD](planner/static/css/erd_lp.png)
 
 ### Revised ERD:
 
-![Revised-ERD](css/erd.png)
+![Revised-ERD](planner/static/css/erd.png)
 
 ## Technologies Used
 
@@ -109,28 +109,29 @@ Authentication: Django User Authentication
 
 ## Installation
 
-Clone the repository:
+1-Clone the repository:
 
 git clone https://github.com/May-alrowaie/lesson-planner.git
-cd lesson-plannner
 
-Install dependencies:
+2- cd lesson-planner
+
+3- Install dependencies:
 
 pip install
 
-Run database migrations:
+4- Run database migrations:
 
 python manage.py migrate
 
-Create a superuser:
+5- Create a superuser:
 
 python manage.py create superuser
 
-Start the server:
+6- Start the server:
 
 python manage.py runserver
 
-Access the application at http://127.0.0.1:8000/
+7-Access the application at http://127.0.0.1:8000/
 
 ## Planned Future Enhancements
 
