@@ -18,7 +18,7 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 
 **Student Management**: View a list of students in a classroom and share students information from all teachers using the app in the school to track their individual progress.
 
-**Feedback System**: Teachers can add feedback and share feedback from all teachers using the app in the school for classrooms based on student performance.
+**Feedback System**: Teachers can add feedback and share feedback from all teachers using the app in the school on student performance.
 
 **Integration of Technology**: Supports incorporating teaching strategies and technological tools to enhance learning outcomes.
 
