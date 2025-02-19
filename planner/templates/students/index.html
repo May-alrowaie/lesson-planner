@@ -21,6 +21,7 @@
         </div>
         <h2 class="card-title">Name:{{ student.name}}</h2>
         <h3>Grade: {{ student.grade }}</h3>
+        <p><strong>Special_needs:</strong> {{ student.special_needs }}</p>
         {% if student.level > 50 %}
         <p>{{ student.level }} Student is a High Achiever {{ student.grade}}</p>
         {% else %}
