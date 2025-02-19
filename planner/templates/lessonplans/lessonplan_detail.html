@@ -16,16 +16,13 @@
     <h2><strong>User:</strong> {{ lessonplan.user }}</h2>
     <h2><strong>Lesson Title:</strong> {{ lessonplan.title }}</h2>
     <h2><strong>Subject:</strong> {{ lessonplan.subject_id }}</h2>
-
+    <h2><strong>Classroom:</strong> {{ lessonplan.classroom }}</h2>
     <p><strong>Grade Level:</strong> {{ lessonplan.grade_level }}</p>
     <p><strong>Division:</strong> {{ lessonplan.division }}</p>
     <p><strong>Duration:</strong> {{ lessonplan.duration }}</p>
     <p><strong>Date:</strong> {{ lessonplan.date }}</p>
     <p><strong>Lesson Objectives:</strong> {{ lessonplan.objectives }}</p>
-    <p>
-      <strong>Integration with other subjects:</strong> {{
-      lessonplan.integration }}
-    </p>
+    <p><strong>Integration:</strong>{{ lessonplan.integration}}</p>
     <p><strong>Description:</strong> {{ lessonplan.description }}</p>
     <p>
       <strong>Teaching Strategy:</strong> {{ lessonplan.teaching_strategy }}

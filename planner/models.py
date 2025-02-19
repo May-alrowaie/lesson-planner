@@ -26,7 +26,7 @@ class Classroom(models.Model):
 class LessonPlan(models.Model):
     plan_id = models.AutoField(primary_key=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name='lesson_plans')
-    classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE, related_name='lesson_plans')
+    classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, blank=True, related_name='lesson_plans')
     subject_id = models.CharField(max_length=50)
     title = models.CharField(max_length=200)
     grade_level = models.CharField(max_length=10)
@@ -42,7 +42,6 @@ class LessonPlan(models.Model):
     assessment = models.TextField()
     technology_used = models.TextField(blank=True, null=True)
     plan_b = models.TextField(blank=True, null=True)
-    # user = models.ForeignKey(User, on_delete=models.CASCADE)
     user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='lesson_plans')
 
     def __str__(self):
@@ -58,7 +57,7 @@ class Student(models.Model):
     grade = models.CharField(max_length=10)
     division = models.CharField(max_length=10)
     student_level = models.CharField(max_length=50)
-    classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, related_name='students')
+    classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, blank=True, related_name='students')
     activity_level = models.CharField(max_length=50)
     learning_style = models.CharField(max_length=50)
     multiple_intelligence = models.CharField(max_length=100)
@@ -96,5 +95,8 @@ class Student(models.Model):
                 new_classroom.students_list = ", ".join(current_students)
                 new_classroom.save()
 
+   
     def __str__(self):
         return self.name
+    
+    
