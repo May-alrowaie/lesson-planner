@@ -48,10 +48,10 @@ class ClassroomDelete(LoginRequiredMixin,DeleteView):
     model = Classroom
     success_url = '/classrooms/'
 
-# @login_required
+@login_required
 def classroom_index(request):
-    classrooms = Classroom.objects.all()    
-    # classrooms = Classroom.objects.filter(user=request.user)
+    # classrooms = Classroom.objects.all()    
+    classrooms = Classroom.objects.filter(user=request.user)
     return render(request, 'classrooms/index.html', {'classrooms': classrooms})  
 
 @login_required
@@ -96,8 +96,8 @@ class LessonPlanDelete(LoginRequiredMixin, DeleteView):
 #STUDENTS:
 @login_required
 def student_index(request):
-    students = Student.objects.all()     
-    # students = Student.objects.filter(user=request.user)
+    # students = Student.objects.all()     
+    students = Student.objects.filter(user=request.user)
     return render(request, 'students/index.html', {'students': students}) 
 
 @login_required

@@ -27,6 +27,7 @@
           />
         </a>
       </div>
+
       <nav>
         <ul>
           {% if user.is_authenticated %}
@@ -55,6 +56,10 @@
         </ul>
       </nav>
     </header>
+
+    {% if user.is_authenticated %}
+    <h1>Welcome, {{ user.first_name }}!</h1>
+    <p>{% endif %}</p>
     <main>{% block content %} {% endblock %}</main>
   </body>
 </html>

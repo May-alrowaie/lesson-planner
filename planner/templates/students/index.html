@@ -9,6 +9,7 @@
   <img src="{% static 'images/classroom.svg' %}" alt="A cat in a teacup" />
   <img src="{% static 'images/classroom.svg' %}" alt="A cat in a box" /> -->
 </section>
+{% if students %}
 
 <section class="card-container">
   {% for student in students %}
@@ -30,5 +31,8 @@
   </div>
   {% endfor %}
 </section>
-
-{% endblock %}
+{% else %}
+<p style="text-align: center; font-size: 18px; color: #555; margin-top: 20px">
+  No students have been added yet.
+</p>
+{% endif %}{% endblock %}

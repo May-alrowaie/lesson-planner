@@ -42,7 +42,8 @@ class LessonPlan(models.Model):
     assessment = models.TextField()
     technology_used = models.TextField(blank=True, null=True)
     plan_b = models.TextField(blank=True, null=True)
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    # user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.SET_NULL, null=True, related_name='lesson_plans')
 
     def __str__(self):
         return self.title
@@ -57,7 +58,7 @@ class Student(models.Model):
     grade = models.CharField(max_length=10)
     division = models.CharField(max_length=10)
     student_level = models.CharField(max_length=50)
-    classroom = models.ForeignKey(Classroom, on_delete=models.CASCADE, related_name='students')
+    classroom = models.ForeignKey(Classroom, on_delete=models.SET_NULL, null=True, related_name='students')
     activity_level = models.CharField(max_length=50)
     learning_style = models.CharField(max_length=50)
     multiple_intelligence = models.CharField(max_length=100)

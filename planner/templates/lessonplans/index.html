@@ -12,6 +12,7 @@
   <img src="{% static 'images/teacup-cat.svg' %}" alt="A cat in a teacup" />
   <img src="{% static 'images/cat-in-box.svg' %}" alt="A cat in a box" /> -->
 </section>
+{% if lessonplans %}
 
 <section class="card-container">
   {% for lessonplans in lessonplans %}
@@ -28,5 +29,8 @@
   </div>
   {% endfor %}
 </section>
-
-{% endblock %}
+{% else %}
+<p style="text-align: center; font-size: 18px; color: #555; margin-top: 20px">
+  No lesson plans have been created yet.
+</p>
+{% endif %}{% endblock %}

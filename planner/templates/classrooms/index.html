@@ -7,11 +7,13 @@
 
 <section class="page-header">
   <h1>All Classrooms</h1>
+
   <!-- <img src="{% static 'images/classroom.svg' %}" alt="A cool cat" />
   <img src="{% static 'images/classroom.svg' %}" alt="A happy cat" />
   <img src="{% static 'images/classroom.svg' %}" alt="A cat in a teacup" />
   <img src="{% static 'images/classroom.svg' %}" alt="A cat in a box" /> -->
 </section>
+{% if classrooms %}
 
 <section class="card-container">
   {% for classroom in classrooms %}
@@ -30,4 +32,8 @@
   {% endfor %}
 </section>
 
-{% endblock %}
+{% else %}
+<p style="text-align: center; font-size: 18px; color: #555; margin-top: 20px">
+  No classrooms have been added yet.
+</p>
+{% endif %} {% endblock %}
