@@ -65,8 +65,35 @@ class Student(models.Model):
     parent_info = models.TextField(blank=True, null=True)
     user = models.ForeignKey(User, on_delete=models.CASCADE)
 
+    # def __str__(self):
+    #     return self.name
+    
+    # def get_absolute_url(self):
+    #     return reverse('student-detail', kwargs={'student_id': self.student_id})
+
+    def save(self, *args, **kwargs):
+
+        if self.pk:
+            old_student = Student.objects.get(pk=self.pk)  
+
+            if old_student.classroom != self.classroom:
+                old_classroom = old_student.classroom
+                if old_classroom and old_classroom.students_list:
+                    current_students = old_classroom.students_list.split(", ")
+                    if self.name in current_students:
+                        current_students.remove(self.name)  
+                        old_classroom.students_list = ", ".join(current_students)
+                        old_classroom.save()
+
+        super().save(*args, **kwargs) 
+
+        new_classroom = self.classroom
+        if new_classroom:
+            current_students = new_classroom.students_list.split(", ") if new_classroom.students_list else []
+            if self.name not in current_students:  
+                current_students.append(self.name)
+                new_classroom.students_list = ", ".join(current_students)
+                new_classroom.save()
+
     def __str__(self):
         return self.name
-    
-    def get_absolute_url(self):
-        return reverse('student-detail', kwargs={'student_id': self.student_id})
