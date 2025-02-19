@@ -66,7 +66,7 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 ## Screenshots
 
 ![Homepage](planner/static/images/2.png)
-
+![redirected page after signing in](planner/static/images/welcome.png)
 ![About](planner/static/images/about.png)
 ![Sign-in](planner/static/images/1.png)
 ![View-all-classroom](planner/static/images/allclassrooms.png)
