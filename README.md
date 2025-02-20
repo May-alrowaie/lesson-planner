@@ -97,7 +97,6 @@ May Alrowaie [LinkedIn](https://www.linkedin.com/in/may-alrowaie)
 ### Revised ERD:
 
 ![Revised-ERD](planner/static/images/erd.png)
-![Revised-ERD](planner/static/images/erd.png)
 ![Revised-ERD](planner/static/images/final-erd.png)
 
 ## Technologies Used
